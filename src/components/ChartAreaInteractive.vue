@@ -26,10 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { ref } from "process"
-import { computed } from "vue"
-
-const description = "An interactive area chart"
+import { computed, ref } from "vue"
 
 const chartData = [
   { date: new Date("2024-04-01"), desktop: 222, mobile: 150 },
@@ -124,6 +121,7 @@ const chartData = [
   { date: new Date("2024-06-29"), desktop: 103, mobile: 160 },
   { date: new Date("2024-06-30"), desktop: 446, mobile: 400 },
 ]
+
 type Data = typeof chartData[number]
 
 const chartConfig = {

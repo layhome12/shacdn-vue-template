@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Dashboard from "@/views/dashboard/index.vue";
+import Admin from "./layout/Admin.vue";
 </script>
 
 <template>
-  <Dashboard />
+  <Admin />
 </template>
