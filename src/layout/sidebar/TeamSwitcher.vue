@@ -74,7 +74,6 @@ const activeTeam = ref(props.teams[0]!)
             {{ team.name }}
             <DropdownMenuShortcut>⌘{{ index + 1 }}</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuSeparator />
         </DropdownMenuContent>
       </DropdownMenu>
     </SidebarMenuItem>

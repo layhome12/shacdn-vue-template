@@ -17,6 +17,11 @@ const router = createRouter({
           name: "dashboard",
           component: () => import("@/views/admin/dashboard/index.vue"),
         },
+        {
+          path: "datatable",
+          name: "datatable",
+          component: () => import("@/views/admin/datatable/Index.vue"),
+        },
       ],
     },
     {
