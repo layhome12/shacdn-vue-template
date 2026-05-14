@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import Admin from "./layout/Admin.vue";
+import { useColorMode } from "@vueuse/core";
+
+useColorMode();
 </script>
 
 <template>
-  <Admin />
+  <RouterView />
 </template>

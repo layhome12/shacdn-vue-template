@@ -5,7 +5,6 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import SiteHeader from "@/components/SideHeader.vue";
-import Dashboard from "@/views/dashboard/index.vue";
 </script>
 
 <template>
@@ -18,7 +17,7 @@ import Dashboard from "@/views/dashboard/index.vue";
       <SiteHeader />
 
       <!-- page render -->
-      <Dashboard />
+      <RouterView />
 
     </SidebarInset>
   </SidebarProvider>
