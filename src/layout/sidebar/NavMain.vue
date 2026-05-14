@@ -54,9 +54,9 @@ defineProps<{
               <SidebarMenuSub>
                 <SidebarMenuSubItem v-for="subItem in item.items" :key="subItem.title">
                   <SidebarMenuSubButton as-child>
-                    <a :href="subItem.url">
+                    <RouterLink :to="subItem.url">
                       <span>{{ subItem.title }}</span>
-                    </a>
+                    </RouterLink>
                   </SidebarMenuSubButton>
                 </SidebarMenuSubItem>
               </SidebarMenuSub>
@@ -67,10 +67,10 @@ defineProps<{
         <!-- JIKA TIDAK ADA CHILD -->
         <SidebarMenuItem v-else>
           <SidebarMenuButton as-child :tooltip="item.title">
-            <a :href="item.url">
+            <RouterLink :to="item.url">
               <LucideIcon :icon="item.icon" />
               <span>{{ item.title }}</span>
-            </a>
+            </RouterLink>
           </SidebarMenuButton>
         </SidebarMenuItem>
       </template>

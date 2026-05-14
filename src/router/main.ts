@@ -4,13 +4,18 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: "/",
+      name: "login",
+      component: () => import("@/views/login/Index.vue"),
+    },
+    {
       path: "/admin",
       component: () => import("@/layout/Admin.vue"),
       children: [
         {
           path: "dashboard",
           name: "dashboard",
-          component: () => import("@/views/dashboard/index.vue"),
+          component: () => import("@/views/admin/dashboard/index.vue"),
         },
       ],
     },
