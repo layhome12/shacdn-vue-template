@@ -9,6 +9,7 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
+import SiteHeader from "../../components/SiteHeader.vue";
 
 const data = [
   {
