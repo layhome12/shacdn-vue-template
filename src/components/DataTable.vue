@@ -61,6 +61,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import LucideIcon from "./LucideIcon.vue"
 
 interface TableData {
     id: number
@@ -318,16 +319,16 @@ const table = useVueTable({
                                         </DropdownMenuTrigger>
                                         <DropdownMenuContent align="end">
                                             <DropdownMenuItem>
+                                                <LucideIcon icon="square-pen" class="mr-2 h-4 w-4" />
                                                 Edit
                                             </DropdownMenuItem>
                                             <DropdownMenuItem>
-                                                Make a copy
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem>
-                                                Favorite
+                                                <LucideIcon icon="printer" class="mr-2 h-4 w-4" />
+                                                Print
                                             </DropdownMenuItem>
                                             <DropdownMenuSeparator />
-                                            <DropdownMenuItem>
+                                            <DropdownMenuItem class="text-destructive focus:text-destructive">
+                                                <LucideIcon icon="trash-2" class="mr-2 h-4 w-4" />
                                                 Delete
                                             </DropdownMenuItem>
                                         </DropdownMenuContent>
