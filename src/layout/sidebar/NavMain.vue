@@ -16,18 +16,10 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import LucideIcon from "@/components/LucideIcon.vue";
+import type { SidebarMenu as SidebarMenuType } from "@/stores/sidebar";
 
 defineProps<{
-  items: {
-    title: string
-    url: string
-    icon?: string
-    isActive?: boolean
-    items?: {
-      title: string
-      url: string
-    }[]
-  }[]
+  items: SidebarMenuType[]
 }>()
 
 </script>

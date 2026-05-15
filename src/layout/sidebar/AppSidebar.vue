@@ -12,11 +12,14 @@ import {
 } from "@/components/ui/sidebar"
 import TeamSwitcher from "./TeamSwitcher.vue"
 
+import { useSidebarStore } from "@/stores/sidebar"
+
 const props = withDefaults(defineProps<SidebarProps>(), {
   collapsible: "icon",
 })
 
-// This is sample data.
+const sidebar = useSidebarStore();
+
 const data = {
   user: {
     name: "shadcn",
@@ -30,26 +33,6 @@ const data = {
       plan: "Enterprise",
     },
   ],
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "/admin/dashboard",
-      icon: "house-heart",
-      items: [],
-    },
-    {
-      title: "Playground",
-      url: "#",
-      icon: "square-terminal",
-      isActive: true,
-      items: [
-        {
-          title: "Datatable",
-          url: "/admin/datatable",
-        },
-      ],
-    },
-  ],
 }
 </script>
 
@@ -59,7 +42,7 @@ const data = {
       <TeamSwitcher :teams="data.teams" />
     </SidebarHeader>
     <SidebarContent>
-      <NavMain :items="data.navMain" />
+      <NavMain :items="sidebar.menus" />
     </SidebarContent>
     <SidebarFooter>
       <NavUser :user="data.user" />
